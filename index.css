@@ -78,11 +78,13 @@ button{
 .tweet-input-area {
   display: flex;
   flex-direction: row;
+
 }
 
 #text-input {
   resize: none;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 .tweet-inner{
   display: flex;
