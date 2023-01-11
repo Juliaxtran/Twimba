@@ -75,6 +75,15 @@ button{
   margin: 15px 0;
 }
 
+.tweet-input-area {
+  display: flex;
+  flex-direction: row;
+}
+
+#text-input {
+  resize: none;
+  overflow: hidden;
+}
 .tweet-inner{
   display: flex;
   align-items: flex-start;
@@ -118,7 +127,7 @@ button{
 .profile-pic{
   border: 1px solid lightgray;
   border-radius: 50%;
-  width: 48px;
+  width: 50px;
 }
 
 /* utility */
