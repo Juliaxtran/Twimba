@@ -5,11 +5,18 @@ const tweetBtn = document.querySelector('#tweet-btn');
 const tweetInput = document.querySelector('#text-input');
 const feed = document.querySelector('#feed');
 
+
 tweetBtn.addEventListener('click', () => {
   const tweetText = tweetInput.value;
   tweetInput.value = "";
   console.log(tweetText);
 })
+
+document,addEventListener('click', (e) => {
+  console.log("Like", e.target.dataset.like);
+  console.log("Retweet", e.target.dataset.retweet);
+  })
+
 
 const getFeedHtml = () => {
   let feedHtml = "";
