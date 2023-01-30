@@ -12,8 +12,8 @@ tweetBtn.addEventListener('click', () => {
   console.log(tweetText);
 })
 
-const handleLikeClick () => {
-  
+const handleLikeClicK = () => {
+  console.log("Ive been clicked")
 }
 
 
