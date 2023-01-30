@@ -12,10 +12,15 @@ tweetBtn.addEventListener('click', () => {
   console.log(tweetText);
 })
 
-document,addEventListener('click', (e) => {
+const handleLikeClick () => {
+  
+}
+
+
+document.addEventListener('click', (e) => {
   console.log("Like", e.target.dataset.like);
   console.log("Retweet", e.target.dataset.retweet);
-  })
+  });
 
 
 const getFeedHtml = () => {
