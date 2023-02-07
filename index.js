@@ -125,8 +125,8 @@ const getFeedHtml = () => {
     <dic id="replies-${tweet.uuid}" >
     ${repliesHTML}
     </div>
-</div>
-    `})
+</div>`
+})
 
   return feedHtml
 }
