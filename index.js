@@ -18,8 +18,11 @@ document.addEventListener('click', function (e) {
   if (e.target.dataset.like) {
     handleLikeClick(e.target.dataset.like)
   }
-  else if (e.target.dataset.retweet) {
+   if (e.target.dataset.retweet) {
     handleRetweetClick(e.target.dataset.retweet)
+  }
+  if(e.target.dataset.reply){
+    handleReplyClick(e.target.dataset.reply)
   }
 })
 
@@ -52,7 +55,12 @@ const handleRetweetClick = (tweetId) => {
   render();
 }
 
-
+const handleReplyClick = (tweetId) => {
+  const targetTweetObj = tweetsData.filter(tweet => {
+    return tweet.uuid === tweetId
+  })[0];
+   console.log(targetTweetObj.replies)
+}
 
 
 const getFeedHtml = () => {
