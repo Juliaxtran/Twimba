@@ -6,6 +6,7 @@ const tweetInput = document.querySelector('#text-input');
 const feed = document.querySelector('#feed');
 
 
+
 tweetBtn.addEventListener('click', () => {
   const tweetText = tweetInput.value;
   tweetInput.value = "";
@@ -18,8 +19,11 @@ document.addEventListener('click', function (e) {
   if (e.target.dataset.like) {
     handleLikeClick(e.target.dataset.like)
   }
-  if (e.target.dataset.retweet) {
+  else if (e.target.dataset.retweet) {
     handleRetweetClick(e.target.dataset.retweet)
+  }
+  else if (e.target.dataset.reply) {
+    handleReplyClick(e.target.dataset.reply)
   }
 
 })
@@ -53,6 +57,9 @@ const handleRetweetClick = (tweetId) => {
   render();
 }
 
+const handleReplyClick = (replyId) => {
+  document.getElementById(`replies-${replyId}`).classList.toggle('hidden');
+}
 
 
 const getFeedHtml = () => {
@@ -115,7 +122,7 @@ const getFeedHtml = () => {
             </div>
         </div>
     </div>
-    <dic id="replies-${tweet.uuid}">
+    <dic id="replies-${tweet.uuid}" >
     ${repliesHTML}
     </div>
 </div>
