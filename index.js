@@ -25,7 +25,7 @@ const handleLikeClick = (tweetId) => {
     return tweet.uuid === tweetId
   })[0]
   targetTweetObj.likes++
-  console.log(targetTweetObj)
+  render();
 }
 
 
