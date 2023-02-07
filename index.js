@@ -23,8 +23,14 @@ document.addEventListener('click', function (e) {
 const handleLikeClick = (tweetId) => {
   const targetTweetObj = tweetsData.filter(function (tweet) {
     return tweet.uuid === tweetId
-  })[0]
-  targetTweetObj.likes++
+  })[0];
+  if (!targetTweetObj.isLiked) {
+    targetTweetObj.isLiked = true;
+    targetTweetObj.likes++
+  } else {
+    targetTweetObj.isLiked = false;
+    targetTweetObj.likes--
+  }
   render();
 }
 
