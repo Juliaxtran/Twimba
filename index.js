@@ -10,17 +10,26 @@ tweetBtn.addEventListener('click', () => {
   const tweetText = tweetInput.value;
   tweetInput.value = "";
   console.log(tweetText);
+
+
 })
 
-const handleLikeClicK = () => {
-  console.log("Ive been clicked")
+document.addEventListener('click', function (e) {
+  if (e.target.dataset.like) {
+    handleLikeClick(e.target.dataset.like)
+  }
+})
+
+const handleLikeClick = (tweetId) => {
+  const targetTweetObj = tweetsData.filter(function (tweet) {
+    return tweet.uuid === tweetId
+  })[0]
+  targetTweetObj.likes++
+  console.log(targetTweetObj)
 }
 
 
-document.addEventListener('click', (e) => {
-  console.log("Like", e.target.dataset.like);
-  console.log("Retweet", e.target.dataset.retweet);
-  });
+
 
 
 const getFeedHtml = () => {
