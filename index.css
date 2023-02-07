@@ -18,11 +18,11 @@ i{
 }
 
 .liked{
-  color: red;
+  background-color: red;
 }
 
 .retweeted {
-color: limegreen;
+background-color: limegreen;
 }
 
 .fa-solid {
@@ -141,3 +141,4 @@ button{
   display: none;
 }
 
+/* */
