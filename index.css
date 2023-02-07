@@ -17,17 +17,20 @@ i{
   cursor: pointer;
 }
 
-.liked{
-  background-color: red;
-}
-
-.retweeted {
-background-color: limegreen;
-}
 
 .fa-solid {
   color: #999;
 }
+
+.liked{
+ color: red;
+}
+
+
+.retweeted {
+ color: limegreen;
+}
+
 
 /* layout */
 
